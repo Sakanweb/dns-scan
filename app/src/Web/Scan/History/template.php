@@ -27,10 +27,30 @@ foreach ($runs as $run) {
 <style>
 .ds { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; max-width: 1100px; margin: 0 auto; padding: 1.5rem; color: #122; }
 .ds h1 { font-size: 1.5rem; margin: 0 0 1rem; }
-.ds .toolbar { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.5rem; align-items: center; }
-.ds form { display: flex; gap: .5rem; flex-wrap: wrap; flex: 1; }
-.ds input[type=text] { flex: 1; min-width: 220px; padding: .55rem .7rem; border: 1px solid #9ab; border-radius: 6px; }
-.ds button, .ds a.btn { background: #0b6; color: #fff; border: 0; border-radius: 6px; padding: .55rem .9rem; text-decoration: none; cursor: pointer; }
+.ds .toolbar { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.5rem; align-items: stretch; }
+.ds form { display: flex; gap: .5rem; flex-wrap: wrap; flex: 1; align-items: stretch; }
+.ds input[type=text],
+.ds button,
+.ds a.btn {
+    box-sizing: border-box;
+    height: 2.5rem;
+    font: inherit;
+    line-height: 1;
+}
+.ds input[type=text] { flex: 1; min-width: 220px; padding: 0 .7rem; border: 1px solid #9ab; border-radius: 6px; }
+.ds button, .ds a.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b6;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    padding: 0 .9rem;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
 .ds button.off { background: #a33; }
 .ds table { width: 100%; border-collapse: collapse; font-size: .9rem; }
 .ds th, .ds td { border-bottom: 1px solid #dde3ea; padding: .55rem .4rem; text-align: left; vertical-align: top; }
