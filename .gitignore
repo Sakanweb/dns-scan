@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+app/vendor/
+app/runtime/
+app/.phpunit.cache/
+.idea/
+.vscode/
+*.log
